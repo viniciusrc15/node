@@ -1,0 +1,5 @@
+-NPM: Instalação de pacotes e parametros(init npm)
+-EJS: Deixa um ejs funcionar como uma pagina HTML
+-EXPRESS: Framework para montar servidores web
+-NODEMON: Otimiza contrução reiniciando aplicação
+-COMMONJS: Funciona como orientação em objeto em uma especie de classe (Module.exports = function(){}).
