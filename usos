@@ -3,3 +3,6 @@
 -EXPRESS: Framework para montar servidores web
 -NODEMON: Otimiza contrução reiniciando aplicação
 -COMMONJS: Funciona como orientação em objeto em uma especie de classe (Module.exports = function(){}).
+-CONSIGN: Recupera todas as rotas automaticamente e autoload de views, controllers
+-BODY_PARSE: ajuda a recuperação de dados enviados via post
+-EXPRESS-VALIDATOR: Validação de dadod
