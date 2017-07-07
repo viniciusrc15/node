@@ -1,17 +1,14 @@
-module.exports = function(app){
-	
-	app.get('/noticias', function(req, res){
-		var mysql = require('mysql');
-		var connection = mysql.createConnection({
-			host: 'localhost',
-			user: 'root',
-			password: '1234',
-			database: 'cadastro'
-		});
+//var dbConnection = require ("../../config/dbConnection");  Saiu com consign no BD
 
-		connection.query('select * from curso', function(err, result){
-			console.log(err);
-			res.send(result);
+module.exports = function(application){
+	
+	application.get('/noticias', function(req, res){
+		
+		var connection = application.config.dbConnection();
+		var noticiasModel = new application.app.models.noticiasModel(connection);
+
+		noticiasModel.getNoticias(function(err, result){
+			res.render("noticias/noticias",{noticias: result});
 		});
 		//res.render("noticias/noticias");
 	});
