@@ -4,12 +4,13 @@ module.exports = function(application){
 	
 	application.get('/noticias', function(req, res){
 		
-		var connection = application.config.dbConnection();
-		var noticiasModel = new application.app.models.noticiasModel(connection);
+		application.app.controllers.noticias.noticiasController(application, req, res);
+		//res.render("noticias/noticias");
+	});
 
-		noticiasModel.getNoticias(function(err, result){
-			res.render("noticias/noticias",{noticias: result});
-		});
+	application.get('/noticia', function(req, res){
+		
+		application.app.controllers.noticias.noticiaController(application, req, res);
 		//res.render("noticias/noticias");
 	});
 };

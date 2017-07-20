@@ -15,7 +15,9 @@ Noticias.prototype.salvarNoticia = function (noticia, callbacks){
 	this._connection.query('insert into noticias set ?', noticia, callbacks);
 }
 
-
+Noticias.prototype.ultimas5Noticias = function(callbacks){
+	this._connection.query('select * from noticias order by data_noticia desc limit 5', callbacks);
+}
 module.exports = function () {
 	return Noticias;
 }
