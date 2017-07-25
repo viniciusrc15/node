@@ -47,7 +47,7 @@
 			<div class="col-md-8">
 				<div class="noticia_wrapper">
 					<span class="noticia_autor"><%= noticias[0].autor %></span>
-					<a href="noticia.html" class="titulo"><%= noticias[0].titulo %></a>
+					<a href="noticia" class="titulo"><%= noticias[0].titulo %></a>
 					<br>
 					<span class="data_criacao"><%= noticias[0].data_criacao %></span>
 					<br />
@@ -56,64 +56,24 @@
 					</p>
 				</div>
 			</div>
-
+			<% for(var i = 0; i < noticias.length; i++){ %>
 			<div class="col-md-4">
 				<div class="noticia_wrapper">
-					<span class="noticia_autor"><%= noticias[1].autor %></span>
-					<a href="noticia.html" class="titulo"><%= noticias[1].titulo %></a>
+					<span class="noticia_autor"><%= noticias[i].autor %></span>
+					<a href="noticia" class="titulo"><%= noticias[i].titulo %></a>
 					<br>
-					<span class="data_criacao"><%= noticias[1].data_criacao %></span>
+					<span class="data_criacao"><%= noticias[i].data_criacao %></span>
 					<br />
 					<p class="resumo">
-						<%= noticias[1].resumo %>
+						<%= noticias[i].resumo %>
 					</p>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-4">
-				<div class="noticia_wrapper">
-					<span class="noticia_autor"><%= noticias[2].autor %></span>
-					<a href="noticia.html" class="titulo"><%= noticias[2].titulo %></a>
-					<br>
-					<span class="data_criacao"><%= noticias[2].data_criacao %></span>
-					<br />
-					<p class="resumo">
-						<%= noticias[2].resumo %>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="noticia_wrapper">
-					<span class="noticia_autor"><%= noticias[3].autor %></span>
-					<a href="noticia.html" class="titulo"><%= noticias[3].titulo %></a>
-					<br>
-					<span class="data_criacao"><%= noticias[3].data_criacao %></span>
-					<br />
-					<p class="resumo">
-						<%= noticias[3].resumo %>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="noticia_wrapper">
-					<span class="noticia_autor"><%= noticias[4].autor %></span>
-					<a href="noticia.html" class="titulo"><%= noticias[4].titulo %></a>
-					<br>
-					<span class="data_criacao"><%= noticias[4].data_criacao %></span>
-					<br />
-					<p class="resumo">
-						<%= noticias[4].resumo %>
-					</p>
-				</div>
-			</div>
+			<% } %>
 		</div>
 
 		<div class="row ver_mais">
-			<button type="button" class="btn btn-default"><a href="noticias.html">Ver todas as notícias</a></button>
+			<button type="button" class="btn btn-default"><a href="noticias">Ver todas as notícias</a></button>
 		</div>
 
 	</div>
